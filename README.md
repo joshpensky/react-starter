@@ -112,7 +112,7 @@ If you're using VS Code (which, c'mon, you should be), install the `Prettier - C
 
 ### Technologies
 
-The following technologies and libraries are being used in the creation and maintenance of the Scout Database:
+The following technologies and libraries are being used in this boilerplate:
 
 - [React](https://reactjs.org/) - JavaScript front-end framework for building user interfaces
 - [React Router](https://reacttraining.com/react-router/) - declaritive routing for React
