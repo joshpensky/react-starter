@@ -46,7 +46,7 @@ You should now be able to visit [localhost](http://localhost:8000) in your brows
 ## Development
 
 ### Project directory
-The layout for the docs are as follows:
+The layout for the repo are as follows:
 ```bash
 react-boilerplate
   |== build                   # build directory (output from webpack, not included in repo)
