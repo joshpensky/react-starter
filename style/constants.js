@@ -1,0 +1,1 @@
+export const fontFamily = "'Helvetica', 'Arial', sans-serif";
