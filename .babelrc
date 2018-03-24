@@ -5,7 +5,8 @@
       [
         { "src": "./components", "expose": "components" },
         { "src": "./pages", "expose": "pages" },
-        { "src": "./style", "expose": "style" }
+        { "src": "./style", "expose": "style" },
+        { "src": "./static", "expose": "static" }
       ]
     ]
   ]
