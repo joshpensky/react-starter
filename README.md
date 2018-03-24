@@ -1,7 +1,7 @@
 # react-boilerplate
 A basic react app for future projects and endeavors
 
-- [scout-api-docs](#scout-api-docs)
+- [react-boilerplate](#react-boilerplate)
   - [Getting started](#getting-started)
     - [Dependencies](#dependencies)
     - [Environment](#environment)
