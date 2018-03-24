@@ -117,7 +117,6 @@ The following technologies and libraries are being used in this boilerplate:
 - [React](https://reactjs.org/) - JavaScript front-end framework for building user interfaces
 - [React Router](https://reacttraining.com/react-router/) - declaritive routing for React
 - [styled-components](https://www.styled-components.com/) - CSS-in-JS library for building React components
-- [axios](https://www.npmjs.com/package/axios) - AJAX requests for React apps
 
 New technologies will be added at need.
 
@@ -128,4 +127,3 @@ The following is a compilation of available documentation for learning about the
 - [React](https://reactjs.org/tutorial/tutorial.html)
 - [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
 - [styled-components](https://www.styled-components.com/docs)
-- [axios](https://www.npmjs.com/package/axios)
