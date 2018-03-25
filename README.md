@@ -8,7 +8,7 @@ A basic react app for future projects and endeavors
   - [Development](#development)
     - [Project directory](#project-directory)
     - [Babel](#babel)
-    - [Prttier](#prettier)
+    - [Prettier](#prettier)
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Miscellaneous](#miscellaneous)
