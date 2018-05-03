@@ -1,8 +1,8 @@
-# react-boilerplate
+# react-starter
 
-A basic react app for future projects and endeavors
+A starter React app for future projects and endeavors
 
-* [react-boilerplate](#react-boilerplate)
+* [react-starter](#react-starter)
   * [Getting started](#getting-started)
     * [Dependencies](#dependencies)
     * [Environment](#environment)
@@ -50,7 +50,7 @@ _**Note:** if at any time you would like to cancel the running server instance, 
 The layout for the repo is as follows:
 
 ```bash
-react-boilerplate
+react-starter
   |== build                   # build directory
     |-- 200.html              # main file that React is injected into, entry point for servers
   |== components              # directory for all components
@@ -146,7 +146,7 @@ Once you enter the credentials, visit the URL for the staging site in your brows
 
 ### Technologies
 
-The following technologies and libraries are being used in this boilerplate:
+The following technologies and libraries are being used in this starter:
 
 * [React](https://reactjs.org/) - JavaScript front-end framework for building user interfaces
 * [React Router](https://reacttraining.com/react-router/) - declaritive routing for React

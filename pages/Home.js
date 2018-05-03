@@ -35,7 +35,7 @@ class Home extends Component {
           <title>Home</title>
         </Helmet>
         <div>
-          <H1>{!valid && 'Not'} React Boilerplate</H1>
+          <H1>{!valid && 'Not'} React Starter</H1>
           <img
             src="static/img/logo.png"
             height="50"
