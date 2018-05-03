@@ -9,7 +9,6 @@ A basic react app for future projects and endeavors
   * [Development](#development)
     * [Project directory](#project-directory)
     * [Babel](#babel)
-    * [Prettier](#prettier)
   * [Testing](#testing)
   * [Deployment](#deployment)
     * [Staging](#staging)
@@ -23,7 +22,6 @@ A basic react app for future projects and endeavors
 
 Follow the instructions in the links below to install the required dependencies on your local machine:
 
-* [Python 3](https://www.python.org/downloads/)
 * [node.js](https://nodejs.org/en/download/)
 * [npm](https://www.npmjs.com/get-npm)
 
@@ -61,7 +59,17 @@ react-boilerplate
     |-- ...
   |== pages                   # directory for all pages within app
     |-- index.js              # React injection file
-    |-- ..
+    |-- ...
+  |== redux                   # directory for all redux functions/objects
+    |== actions               # directory for all redux actions
+      |-- types.js            # all redux action types
+      |-- home.js             # example redux action
+      |-- ...
+    |== reducers              # directory for all redux reducers
+      |-- index.js            # base reducer used in redux store
+      |-- home.js             # example redux reducer
+      |-- ..
+    |-- store.js              # redux store to be used with provider
   |== static                  # directory for static files
     |== img                   # directory for static images
   |== style                   # directory for styled-components
@@ -99,7 +107,7 @@ import React from 'react';
 import { Component1, Component3 } from 'components';
 ```
 
-The final directory that also has the ability for global import statements is `pages`. However, because the `index.js` file within this directory is being used for React injection, all components within this directory must be imported separately (see `components/Root.js`).
+Other directories and files with global import include `actions`, `reducers`, `store`, and `pages`.
 
 ## Testing
 
@@ -145,7 +153,9 @@ The following technologies and libraries are being used in this boilerplate:
 
 * [React](https://reactjs.org/) - JavaScript front-end framework for building user interfaces
 * [React Router](https://reacttraining.com/react-router/) - declaritive routing for React
+* [Redux](https://redux.js.org/) - predictable state container
 * [styled-components](https://www.styled-components.com/) - CSS-in-JS library for building React components
+* [webpack](https://webpack.js.org/) - module builder
 
 New technologies will be added at need.
 
@@ -156,4 +166,6 @@ The following is a compilation of available documentation for learning about the
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * [React](https://reactjs.org/tutorial/tutorial.html)
 * [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
+* [Redux](https://redux.js.org/basics)
 * [styled-components](https://www.styled-components.com/docs)
+* [webpack](https://webpack.js.org/concepts/)
