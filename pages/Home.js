@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { H1 } from 'style';
 
-export default class Home extends React.Component {
+export default class Home extends Component {
   render() {
     return (
       <div>

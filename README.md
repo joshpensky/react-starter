@@ -11,6 +11,7 @@ A basic react app for future projects and endeavors
     - [Prettier](#prettier)
   - [Testing](#testing)
   - [Deployment](#deployment)
+    - [Staging](#staging)
   - [Miscellaneous](#miscellaneous)
     - [Technologies](#technologies)
     - [Documentation](#documentation)
@@ -26,36 +27,30 @@ Follow the instructions in the links below to install the required dependencies 
 ### Environment
 Fork this repository and clone the new one onto your local machine. In the root directory of the folder, run the following command:
 ```sh
-$ npm install --save
+$ npm i
 ```
 
-This will install of the necessary dependencies for development. Next, you're going to want to set up a watcher for your files to autocompile on save. In a new terminal window, navigate to the same directory and run the following command:
+This will install of the necessary dependencies for development. Next, you're going to want to set up a local instance of the project running in a server. To do so, run the following command:
 ```sh
-$ npm run watch
+$ npm run dev
 ```
 
-Finally, in order to run the project locally on your machine for testing, run the following command in the first terminal window:
-```sh
-$ python3 -m http.server 8000
-```
+You should now be able to visit [localhost](http://localhost:5500) in your browser and begin development!
 
-You should now be able to visit [localhost](http://localhost:8000) in your browser and begin development!
-
-*__Note:__ if at any time you would like to cancel the running server or watcher instance, press `CTRL + C`.*
+*__Note:__ if at any time you would like to cancel the running server instance, press `CTRL + C` in the open terminal window.*
 
 ## Development
 
 ### Project directory
-The layout for the repo are as follows:
+The layout for the repo is as follows:
 ```bash
 react-boilerplate
-  |== build                   # build directory (output from webpack, not included in repo)
-    |-- main.js               # compiled React app in a script included in index.html file
+  |== build                   # build directory
+    |-- 200.html              # main file that React is injected into, entry point for servers
   |== components              # directory for all components
     |-- index.js              # components directory configuration for Babel
     |-- Root.js               # root component for entire app (contains Router)
     |-- ...
-  |== node_modules            # local storage of node modules (not included in repo)
   |== pages                   # directory for all pages within app
     |-- index.js              # React injection file
     |-- ..
@@ -69,10 +64,10 @@ react-boilerplate
     |-- ...
   |-- .babelrc                # Babel configuration
   |-- .prettierrc             # Prettier configuration
-  |-- index.html              # main file that React is injected into
   |-- package.json            # configuration for dependencies and project
   |-- README.md               # documentation on development and deployment (this file)
-  |-- webpack.config.js       # webpack config for project
+  |-- webpack.dev.js          # webpack config for project (development version)
+  |-- webpack.prod.js         # webpack config for project (production version)
 ```
 
 ### Babel
@@ -106,7 +101,32 @@ If you're using VS Code (which, c'mon, you should be), install the `Prettier - C
 
 ## Deployment
 
-🚧 *This section is currently under development.* 🚧
+### Staging
+
+This project uses Surge as a way to stage the site before entering production. To begin, run the following command:
+```sh
+$ npm i -g surge
+```
+
+Once installed, open your `package.json` file and update the `{APP_NAME}` of the staging site you want to use:
+```javascript
+{
+  ...
+  "scripts": {
+    ...
+    "stage": "npm run build && surge build {APP_NAME}-stage.surge.sh" // change {APP_NAME} to the name of your app
+  }
+}
+```
+
+At this point, you can run the command:
+```sh
+npm run stage
+```
+
+If this is your first time running Surge on your local, you will need to either create an account or log in with an existing account.
+
+Once you enter the credentials, visit the URL for the staging site in your browser and view your project!
 
 ## Miscellaneous
 

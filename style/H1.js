@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { fontFamily } from 'style/constants';
+import { systemFont } from 'style/constants';
 
 const H1 = styled.h1`
-  font-family: ${fontFamily};
+  font-family: ${systemFont};
 `;
 
 export default H1;

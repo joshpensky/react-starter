@@ -1,13 +1,13 @@
 {
   "plugins": [
-    [
-      "module-alias",
-      [
-        { "src": "./components", "expose": "components" },
-        { "src": "./pages", "expose": "pages" },
-        { "src": "./style", "expose": "style" },
-        { "src": "./static", "expose": "static" }
-      ]
-    ]
+    ["module-resolver", {
+      "alias": {
+        "components": "./components",
+        "pages": "./pages",
+        "style": "./style",
+        "static": "./static"
+      }
+    }],
+    "transform-object-rest-spread"
   ]
 }
