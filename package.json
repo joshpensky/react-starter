@@ -14,10 +14,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/joshpensky/react-boilerplate.git"
   },
-  "keywords": [
-    "react",
-    "boilerplate"
-  ],
+  "keywords": ["react", "boilerplate"],
   "author": "Josh Pensky",
   "license": "ISC",
   "bugs": {
@@ -42,6 +39,7 @@
     "eslint": "^4.16.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "prettier": "^1.12.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
@@ -51,9 +49,6 @@
     "write-file-webpack-plugin": "^4.2.0"
   },
   "lint-staged": {
-    "*.{js,json,md,html}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json,md,html}": ["prettier --write", "git add"]
   }
 }
