@@ -63,12 +63,10 @@ react-boilerplate
   |== redux                   # directory for all redux functions/objects
     |== actions               # directory for all redux actions
       |-- types.js            # all redux action types
-      |-- home.js             # example redux action
       |-- ...
     |== reducers              # directory for all redux reducers
       |-- index.js            # base reducer used in redux store
-      |-- home.js             # example redux reducer
-      |-- ..
+      |-- ...
     |-- store.js              # redux store to be used with provider
   |== static                  # directory for static files
     |== img                   # directory for static images
@@ -76,7 +74,6 @@ react-boilerplate
     |-- constants.js          # constants for styles
     |-- global.js             # globally injected stylesheet
     |-- index.js              # style directory configuration for Babel
-    |-- H1.js                 # example style constant
     |-- ...
   |-- .babelrc                # Babel configuration
   |-- .estlintrc              # ES Lint configuration
