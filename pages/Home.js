@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateHomeTitle } from 'actions/home';
@@ -10,6 +11,7 @@ class Home extends Component {
     this.state = {
       valid: this.props.valid,
     };
+
     this.updateTitle = this.updateTitle.bind(this);
   }
 
@@ -28,10 +30,19 @@ class Home extends Component {
   render() {
     let { valid } = this.state;
     return (
-      <div>
-        <H1>{!valid && 'Not'} React Boilerplate</H1>
-        <img src="static/img/logo.png" height="50" onClick={this.updateTitle} />
-      </div>
+      <Fragment>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+        <div>
+          <H1>{!valid && 'Not'} React Boilerplate</H1>
+          <img
+            src="static/img/logo.png"
+            height="50"
+            onClick={this.updateTitle}
+          />
+        </div>
+      </Fragment>
     );
   }
 }

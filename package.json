@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "A basic react app for future projects and endeavors",
+  "description": "A basic react app for future projects and endeavors.",
   "private": false,
   "main": "build/index.js",
   "scripts": {
@@ -25,6 +25,7 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
@@ -55,6 +56,6 @@
     "write-file-webpack-plugin": "^4.2.0"
   },
   "lint-staged": {
-    "*.{js,json,md,html}": ["prettier --write", "git add"]
+    "*.{js,json,md}": ["prettier --write", "git add"]
   }
 }

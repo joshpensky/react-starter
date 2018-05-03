@@ -1,7 +1,7 @@
 import { UPDATE_HOME_TITLE } from 'actions/types';
 
 const initialState = {
-  valid: false,
+  valid: true,
 };
 
 export default (state = initialState, action) => {
