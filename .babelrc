@@ -5,7 +5,10 @@
         "components": "./components",
         "pages": "./pages",
         "style": "./style",
-        "static": "./static"
+        "static": "./static",
+        "store": "./redux/store",
+        "reducers": "./redux/reducers",
+        "actions": "./redux/actions"
       }
     }],
     "transform-object-rest-spread"
