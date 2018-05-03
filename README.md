@@ -1,48 +1,56 @@
 # react-boilerplate
+
 A basic react app for future projects and endeavors
 
-- [react-boilerplate](#react-boilerplate)
-  - [Getting started](#getting-started)
-    - [Dependencies](#dependencies)
-    - [Environment](#environment)
-  - [Development](#development)
-    - [Project directory](#project-directory)
-    - [Babel](#babel)
-    - [Prettier](#prettier)
-  - [Testing](#testing)
-  - [Deployment](#deployment)
-    - [Staging](#staging)
-  - [Miscellaneous](#miscellaneous)
-    - [Technologies](#technologies)
-    - [Documentation](#documentation)
+* [react-boilerplate](#react-boilerplate)
+  * [Getting started](#getting-started)
+    * [Dependencies](#dependencies)
+    * [Environment](#environment)
+  * [Development](#development)
+    * [Project directory](#project-directory)
+    * [Babel](#babel)
+    * [Prettier](#prettier)
+  * [Testing](#testing)
+  * [Deployment](#deployment)
+    * [Staging](#staging)
+  * [Miscellaneous](#miscellaneous)
+    * [Technologies](#technologies)
+    * [Documentation](#documentation)
 
 ## Getting started
 
 ### Dependencies
+
 Follow the instructions in the links below to install the required dependencies on your local machine:
-- [Python 3](https://www.python.org/downloads/)
-- [node.js](https://nodejs.org/en/download/)
-- [npm](https://www.npmjs.com/get-npm)
+
+* [Python 3](https://www.python.org/downloads/)
+* [node.js](https://nodejs.org/en/download/)
+* [npm](https://www.npmjs.com/get-npm)
 
 ### Environment
+
 Fork this repository and clone the new one onto your local machine. In the root directory of the folder, run the following command:
+
 ```sh
 $ npm i
 ```
 
 This will install of the necessary dependencies for development. Next, you're going to want to set up a local instance of the project running in a server. To do so, run the following command:
+
 ```sh
 $ npm run dev
 ```
 
-You should now be able to visit [localhost](http://localhost:5500) in your browser and begin development!
+You should now be able to visit [localhost](http://localhost:3000) in your browser and begin development!
 
-*__Note:__ if at any time you would like to cancel the running server instance, press `CTRL + C` in the open terminal window.*
+_**Note:** if at any time you would like to cancel the running server instance, press `CTRL + C` in the open terminal window._
 
 ## Development
 
 ### Project directory
+
 The layout for the repo is as follows:
+
 ```bash
 react-boilerplate
   |== build                   # build directory
@@ -63,24 +71,29 @@ react-boilerplate
     |-- H1.js                 # example style constant
     |-- ...
   |-- .babelrc                # Babel configuration
+  |-- .estlintrc              # ES Lint configuration
+  |-- .gitignore              # ignore file for git
   |-- .prettierrc             # Prettier configuration
   |-- package.json            # configuration for dependencies and project
   |-- README.md               # documentation on development and deployment (this file)
-  |-- webpack.dev.js          # webpack config for project (development version)
-  |-- webpack.prod.js         # webpack config for project (production version)
+  |-- webpack.dev.js          # dev webpack config for project
+  |-- webpack.prod.js         # prod webpack config for project
 ```
 
 ### Babel
+
 It's important to note that both the `components` and `style` directory contain an `index.js` file used for Babel configuration. In these files, you should import and export all components and style elements, respectively:
+
 ```javascript
 import Component1 from './Component1';
 import Component2 from './Component2';
 import Component3 from './Component3';
 
-export { Component1, Component2, Component3 }
+export { Component1, Component2, Component3 };
 ```
 
 By doing the above, we can reference just the directory in our import statements. This stops us from having to use relative import statements and enables us to import multiple objects at the same time:
+
 ```javascript
 import React from 'react';
 import { Component1, Component3 } from 'components';
@@ -88,27 +101,22 @@ import { Component1, Component3 } from 'components';
 
 The final directory that also has the ability for global import statements is `pages`. However, because the `index.js` file within this directory is being used for React injection, all components within this directory must be imported separately (see `components/Root.js`).
 
-### Prettier
-This project also includes a Prettier configuration. Prettier is an extension that beautifies and creates a uniform style guide for your code. This makes it easier to maintain code styles across multiple developers.
-
-If you're using VS Code (which, c'mon, you should be), install the `Prettier - Code formatter` extension. Then, on your JS code open the command pallete (`⌘⇧P`) and select Format Document. 
-
-*__Note:__ Please make sure to perform this action on all of modified or created files before pushing your commit.*
-
 ## Testing
 
-🚧 *This section is currently under development.* 🚧
+🚧 _This section is currently under development._ 🚧
 
 ## Deployment
 
 ### Staging
 
 This project uses Surge as a way to stage the site before entering production. To begin, run the following command:
+
 ```sh
 $ npm i -g surge
 ```
 
 Once installed, open your `package.json` file and update the `{APP_NAME}` of the staging site you want to use:
+
 ```javascript
 {
   ...
@@ -120,6 +128,7 @@ Once installed, open your `package.json` file and update the `{APP_NAME}` of the
 ```
 
 At this point, you can run the command:
+
 ```sh
 npm run stage
 ```
@@ -134,16 +143,17 @@ Once you enter the credentials, visit the URL for the staging site in your brows
 
 The following technologies and libraries are being used in this boilerplate:
 
-- [React](https://reactjs.org/) - JavaScript front-end framework for building user interfaces
-- [React Router](https://reacttraining.com/react-router/) - declaritive routing for React
-- [styled-components](https://www.styled-components.com/) - CSS-in-JS library for building React components
+* [React](https://reactjs.org/) - JavaScript front-end framework for building user interfaces
+* [React Router](https://reacttraining.com/react-router/) - declaritive routing for React
+* [styled-components](https://www.styled-components.com/) - CSS-in-JS library for building React components
 
 New technologies will be added at need.
 
 ### Documentation
 
 The following is a compilation of available documentation for learning about the technologies and processes listed in sections above:
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [React](https://reactjs.org/tutorial/tutorial.html)
-- [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
-- [styled-components](https://www.styled-components.com/docs)
+
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [React](https://reactjs.org/tutorial/tutorial.html)
+* [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
+* [styled-components](https://www.styled-components.com/docs)

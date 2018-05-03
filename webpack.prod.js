@@ -1,6 +1,7 @@
 path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
@@ -10,13 +11,13 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: 'build/',
+    publicPath: 'build',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: path.resolve(__dirname, 'node_modules/'),
+        exclude: path.resolve(__dirname, 'node_modules'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -42,10 +43,13 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, './static/'),
-        to: path.resolve(__dirname, './build/static/'),
+        from: path.resolve(__dirname, 'static'),
+        to: path.resolve(__dirname, 'build/static'),
         toType: 'dir',
       },
     ]),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+    }),
   ],
 };

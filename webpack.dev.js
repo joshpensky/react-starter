@@ -10,13 +10,13 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: 'build/',
+    publicPath: 'build',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: path.resolve(__dirname, 'node_modules/'),
+        exclude: path.resolve(__dirname, 'node_modules'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -30,8 +30,8 @@ module.exports = {
     new WriteFilePlugin(),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, './static/'),
-        to: path.resolve(__dirname, './build/static/'),
+        from: path.resolve(__dirname, 'static'),
+        to: path.resolve(__dirname, 'build/static'),
         toType: 'dir',
       },
     ]),
@@ -39,7 +39,7 @@ module.exports = {
   devServer: {
     contentBase: 'build/',
     compress: true,
-    port: 5500,
+    port: 3000,
     inline: true,
     publicPath: 'static/',
     index: '200.html',
