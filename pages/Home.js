@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateHomeTitle } from 'actions/home';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { H1 } from 'style';
 
 class Home extends Component {

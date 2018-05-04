@@ -58,7 +58,7 @@ react-starter
     |-- Root.js               # root component for entire app (contains Router)
     |-- ...
   |== pages                   # directory for all pages within app
-    |-- index.js              # React injection file
+    |-- index.js              # React DOM injection file
     |-- ...
   |== redux                   # directory for all redux functions/objects
     |== actions               # directory for all redux actions

@@ -1,7 +1,7 @@
 path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-var ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
