@@ -1,5 +1,10 @@
 .vscode
 node_modules
-build/*
 npm-*
-!build/200.html
+.DS_store
+
+# build folders
+dist
+
+# environment variables
+.env

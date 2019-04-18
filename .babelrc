@@ -1,16 +1,31 @@
 {
-  "plugins": [
-    ["module-resolver", {
-      "alias": {
-        "components": "./components",
-        "pages": "./pages",
-        "style": "./style",
-        "static": "./static",
-        "store": "./redux/store",
-        "reducers": "./redux/reducers",
-        "actions": "./redux/actions"
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
       }
-    }],
-    "transform-object-rest-spread"
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "actions": "./src/store/actions",
+          "components": "./src/components",
+          "containers": "./src/containers",
+          "hooks": "./src/hooks",
+          "reducers": "./src/store/reducers",
+          "router": "./src/router",
+          "static": "./src/static",
+          "store": "./src/store",
+          "style": "./src/style",
+          "utils": "./src/utils"
+        }
+      }
+    ]
   ]
 }
